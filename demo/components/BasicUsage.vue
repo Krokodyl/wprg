@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h2>Basic Usage</h2>
+    <p>{{ counter }}</p>
+    <Library :books="data_books"/>
+  <h2>Basic Usage</h2>
     <pre>&lt;template&gt;
   &lt;sidebar-menu :menu="menu" /&gt;
 &lt;/template&gt;
@@ -64,3 +66,23 @@
 </pre>
   </div>
 </template>
+
+<script>
+
+import Library from './Library';
+
+export default {
+  components: {
+    Library
+  },
+  data: function() {
+    return {
+      counter: 11,
+      data_books: [
+          { title: 'test'},
+          { title: 'test2'}
+      ]
+    }
+  }
+}
+</script>
